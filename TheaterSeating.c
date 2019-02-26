@@ -67,7 +67,15 @@ void getSeatPricing(){
 
 	if(row == -1){
 
-		options();
+		while (exitCheck == 0){
+
+			options();
+
+
+
+		}
+
+
 
 	}
 
@@ -86,6 +94,8 @@ void getSeatPricing(){
 		theaterSeating[row][seat] = '*';
 		totalTickets(row);
 		printf("\nYour tickets for Row %d cost $%.02lf.", row, seatPrices[row - 1]);
+
+		displayTheaterSeating();
 
 
 	}
@@ -141,7 +151,7 @@ void getSeatPricing(){
 		}
 	}
 
-	printf("%d seats have been sold.", counter);
+	printf("%d seat(s) have been sold.", counter);
 
 
 } void seatsTotal(){
@@ -157,7 +167,7 @@ void getSeatPricing(){
 		}
 	}
 
-	printf("%.d seats are still available.", counter);
+	printf("%.d seat(s) are still available.", counter);
 
 
 } void options(void){
