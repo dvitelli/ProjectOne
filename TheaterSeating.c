@@ -24,7 +24,7 @@ void getSeatPricing(){
 
 	printf("\nPlease enter the pricing for Row %d:  ", i+1);
 	fflush(stdout);
-	scanf("%f", &seatPrices[i]);
+	scanf("%lf", &seatPrices[i]);
 
 	}
 
@@ -85,11 +85,8 @@ void getSeatPricing(){
 
 		theaterSeating[row][seat] = '*';
 		totalTickets(row);
-		printf("\nYour tickets for Row %d cost $%.02f.", row, seatPrices[row - 1]);
-		for(int i = 0; i < 15; i++){
+		printf("\nYour tickets for Row %d cost $%.02lf.", row, seatPrices[row - 1]);
 
-			printf("%f", seatPrices[i]);
-		}
 
 	}
 
